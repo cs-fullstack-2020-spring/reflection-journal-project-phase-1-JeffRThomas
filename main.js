@@ -14,9 +14,9 @@ let postButton = document.getElementById("postButton");
 console.log(postButton);//Selection Sanity Check
 let journalEntries = [];
 let journalEntry = {
-    CreationDate: "",
-    JournalEntry: "",
-    Confidence: "",
+    CreationDate: "Date User Posted",
+    JournalEntry: "User's Post",
+    Confidence: "User Rated Confidence",
 };
 // *******************************************************************************************************
 
@@ -44,9 +44,10 @@ let postEntry = (userSubmit) => {
     journalEntry.CreationDate = dateField.value;
     journalEntry.JournalEntry = entryField.value;
     journalEntry.Confidence = confidenceDropDown.value;
+    journalEntries.forEach(journalEntry => journalEntries.push(journalEntry));
 }
 postButton.addEventListener("click", postEntry);
-console.log(journalEntry);
+// console.log(journalEntry);
 // *******************************************************************************************************
 
 
