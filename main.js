@@ -1,7 +1,6 @@
 // JS Link Check
 // console.log("JS File Linked");
 
-
 // REFERENCE VARIABLE DECLARATION
 // *******************************************************************************************************
 let dateField = document.getElementById("creationdate");
@@ -40,11 +39,12 @@ let postEntry = (userSubmit) => {
 postButton.addEventListener("click", postEntry);
 // *******************************************************************************************************
 
-
 // POST USER ENTRY TO DOM
 // *******************************************************************************************************
-// pastPosts.innerText = 
-
+// let printEntries = (entry) => {
+//     console.log(entry);
+// }
+// pastPosts.innerText = journalEntries.forEach(printEntries)
 // *******************************************************************************************************
 
 
