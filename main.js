@@ -12,17 +12,10 @@ let confidenceDropDown = document.getElementById("confidencerating");
 console.log(confidenceDropDown);//Selection Sanity Check
 let postButton = document.getElementById("postButton");
 console.log(postButton);//Selection Sanity Check
-let pastPosts = document.getElementById("recentPosts");
+let pastPosts = document.getElementById("displayAll");
 console.log(pastPosts);
 let journalEntries = [];
-let journalEntry = {
-    CreationDate: "Date User Posted",
-    JournalEntry: "User's Post",
-    Confidence: "User Rated Confidence",
-};
 // *******************************************************************************************************
-
-
 
 // FORM ENTRY VALIDATION
 // *******************************************************************************************************
@@ -31,25 +24,20 @@ let journalEntry = {
 // }
 // *******************************************************************************************************
 
-// USER INFO STORAGE
-// *******************************************************************************************************
-journalEntries.forEach(journalEntry => journalEntries.push(journalEntry));
-
-// *******************************************************************************************************
-
-
-
 // BUTTON ACTIVATION
 // *******************************************************************************************************
 let postEntry = (userSubmit) => {
     userSubmit.preventDefault();
     console.log("User Recorded A Post");
-    journalEntry.CreationDate = dateField.value;
-    journalEntry.JournalEntry = entryField.value;
-    journalEntry.Confidence = confidenceDropDown.value;
+    let journalEntry = {
+        CreationDate: dateField.value,
+        JournalEntry: entryField.value,
+        Confidence: confidenceDropDown.value,
+    };
+    console.log(`Creation Date:${journalEntry.CreationDate}\nJournal Entry:${journalEntry.JournalEntry}\nConfidence:${journalEntry.Confidence}`);
+    journalEntries.push(journalEntry);
 }
 postButton.addEventListener("click", postEntry);
-// console.log(journalEntry);
 // *******************************************************************************************************
 
 
