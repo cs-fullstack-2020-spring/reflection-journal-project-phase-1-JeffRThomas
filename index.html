@@ -10,42 +10,47 @@
 
 <body>
     <!-- <h1>CSS Link Check!!!</h1> -->
-    <form action="">
-        <fieldset>
-            <legend>Reflections</legend>
-            <div>
-                <label for="creationdate">Creation Date:</label>
-                <input type="date" name="Creation Date" id="creationdate">
-            </div>
+    <div id="outsideBorder">
+        <div id="gridcontainer">
+            <header id="header">My Journal</header>
+            <form action="">
+                <fieldset>
+                    <legend>Reflections</legend>
+                    <div>
+                        <label for="creationdate">Creation Date:</label>
+                        <input type="date" name="Creation Date" id="creationdate">
+                    </div>
 
-            <div>
-                <label for="journalentry">Journal Entry:</label>
+                    <div>
+                        <label for="journalentry">Journal Entry:</label>
+                        <div>
+                            <textarea name="journalentry" id="journalentry" cols="30" rows="10"
+                                placeholder="Enter your post"></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="confidencerating">Confidence Level:</label>
+                        <select name="confidence" id="confidencerating">
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="postButton">Post Entry</button>
+                </fieldset>
+            </form>
+
+            <footer id="recentPosts">Recent Posts
                 <div>
-                    <textarea name="journalentry" id="journalentry" cols="30" rows="10"
-                        placeholder="Enter your post"></textarea>
+                    <label for="RecentPosts"></label>
+                    <div>
+                        <textarea name="journalentry" cols="40" rows="20"></textarea>
+                    </div>
                 </div>
-            </div>
-
-            <div>
-                <label for="confidencerating">Confidence Level</label>
-                <select name="confidence" id="confidencerating">
-                    <option value="High">High</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Low">Low</option>
-                </select>
-            </div>
-            <button type="submit" id="postButton">Post Entry</button>
-        </fieldset>
-    </form>
-
-    <footer>Recent Post
-        <div>
-            <label for="RecentPosts"></label>
-            <div>
-                <textarea name="journalentry" id="recentPosts" cols="30" rows="10"></textarea>
-            </div>
+            </footer>
         </div>
-    </footer>
+    </div>
 
     <script src="main.js"></script>
 </body>

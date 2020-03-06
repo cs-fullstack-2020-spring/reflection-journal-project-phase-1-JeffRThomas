@@ -12,6 +12,8 @@ let confidenceDropDown = document.getElementById("confidencerating");
 console.log(confidenceDropDown);//Selection Sanity Check
 let postButton = document.getElementById("postButton");
 console.log(postButton);//Selection Sanity Check
+let pastPosts = document.getElementById("recentPosts");
+console.log(pastPosts);
 let journalEntries = [];
 let journalEntry = {
     CreationDate: "Date User Posted",
@@ -31,6 +33,7 @@ let journalEntry = {
 
 // USER INFO STORAGE
 // *******************************************************************************************************
+journalEntries.forEach(journalEntry => journalEntries.push(journalEntry));
 
 // *******************************************************************************************************
 
@@ -44,7 +47,6 @@ let postEntry = (userSubmit) => {
     journalEntry.CreationDate = dateField.value;
     journalEntry.JournalEntry = entryField.value;
     journalEntry.Confidence = confidenceDropDown.value;
-    journalEntries.forEach(journalEntry => journalEntries.push(journalEntry));
 }
 postButton.addEventListener("click", postEntry);
 // console.log(journalEntry);
@@ -53,6 +55,7 @@ postButton.addEventListener("click", postEntry);
 
 // POST USER ENTRY TO DOM
 // *******************************************************************************************************
+// pastPosts.innerText = 
 
 // *******************************************************************************************************
 
