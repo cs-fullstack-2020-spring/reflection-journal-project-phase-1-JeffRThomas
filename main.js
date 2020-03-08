@@ -18,6 +18,7 @@ let journalEntries = [];
 
 // FORM ENTRY VALIDATION
 // *******************************************************************************************************
+// !! no need for this "validation" - using the correct input fields and adding required to those fields is the only validation you need
 // if (dateField==""){
 //     alert("You must enter a date.");
 // }
@@ -45,6 +46,7 @@ postButton.addEventListener("click", postEntry);
 //     console.log(entry);
 // }
 // pastPosts.innerText = journalEntries.forEach(printEntries)
+// !! looks like you were making progress toward a solution
 // *******************************************************************************************************
 
 
